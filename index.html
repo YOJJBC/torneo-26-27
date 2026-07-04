@@ -13,23 +13,37 @@
             <button onclick="mostrarSeccion('clasificacion')">Clasificación</button>
             <button onclick="mostrarSeccion('jornadas')">Jornadas</button>
             <button onclick="mostrarSeccion('resultados')">Resultados</button>
+            <button onclick="mostrarSeccion('escrutador')">Escrutador 2.0</button>
         </nav>
     </header>
 
     <main>
+        <!-- CLASIFICACIÓN -->
         <section id="clasificacion" class="seccion">
             <h2>Clasificación</h2>
             <table id="tabla-clasificacion"></table>
         </section>
 
+        <!-- JORNADAS -->
         <section id="jornadas" class="seccion" style="display:none;">
             <h2>Jornadas</h2>
             <div id="lista-jornadas"></div>
         </section>
 
+        <!-- RESULTADOS -->
         <section id="resultados" class="seccion" style="display:none;">
             <h2>Resultados</h2>
             <div id="lista-resultados"></div>
+        </section>
+
+        <!-- ESCRUTADOR 2.0 (TU IFRAME) -->
+        <section id="escrutador" class="seccion" style="display:none;">
+            <h2>Escrutador 2.0</h2>
+
+            <iframe width="100%" height="900" frameborder="0" scrolling="no"
+            src="https://1drv.ms/x/c/9e2ad67d77893109/IQRKLS76eZCRQZ54Qma-2pFUAdmMrgJh6S6kH5fDoPp6b0U?em=2&wdAllowInteractivity=False&AllowTyping=True&Item='Escrutador'!C14%3AN50&wdHideGridlines=True&wdInConfigurator=True">
+            </iframe>
+
         </section>
     </main>
 
