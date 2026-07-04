@@ -1,0 +1,24 @@
+{
+    "equipos": [
+        "Equipo A",
+        "Equipo B",
+        "Equipo C",
+        "Equipo D"
+    ],
+    "jornadas": [
+        {
+            "numero": 1,
+            "partidos": [
+                {"local": "Equipo A", "visitante": "Equipo B", "golesLocal": 2, "golesVisitante": 1},
+                {"local": "Equipo C", "visitante": "Equipo D", "golesLocal": 0, "golesVisitante": 0}
+            ]
+        },
+        {
+            "numero": 2,
+            "partidos": [
+                {"local": "Equipo A", "visitante": "Equipo C", "golesLocal": 1, "golesVisitante": 3},
+                {"local": "Equipo B", "visitante": "Equipo D", "golesLocal": 2, "golesVisitante": 2}
+            ]
+        }
+    ]
+}

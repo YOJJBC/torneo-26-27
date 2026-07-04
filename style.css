@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #f2f2f2;
+    background: #e9e9e9;
 }
 
 header {
@@ -11,6 +11,10 @@ header {
     text-align: center;
 }
 
+nav {
+    margin-top: 10px;
+}
+
 nav button {
     margin: 5px;
     padding: 10px 15px;
@@ -18,6 +22,7 @@ nav button {
     color: white;
     border: none;
     cursor: pointer;
+    border-radius: 4px;
 }
 
 nav button:hover {
@@ -42,4 +47,10 @@ table th, table td {
 
 h2 {
     margin-top: 0;
+}
+
+.seccion {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
 }
