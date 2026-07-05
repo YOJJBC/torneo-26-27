@@ -92,9 +92,11 @@ table td {
 /* ======== IFRAME ======== */
 /* ======== IFRAME ======== */
 iframe {
-    width: 2000px !important; /* ahora sí mide 2000 px reales */
-    max-width: none !important;
+    width: 700px;
     height: 900px;
     border: none;
     margin-top: 10px;
+
+    transform: scale(0.8);
+    transform-origin: top left;
 }
