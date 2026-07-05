@@ -2,57 +2,76 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Torneo 26/27</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body class="dark">
+
+    <!-- HEADER -->
     <header>
+        <!-- BOTÓN SOL/LUNA (vacío para evitar doble icono) -->
+        <button id="toggle-mode"></button>
+
         <h1>Torneo 26/27</h1>
-        <nav>
-            <button onclick="mostrarSeccion('clasificacion')">Clasificación</button>
-            <button onclick="mostrarSeccion('jornadas')">Jornadas</button>
-            <button onclick="mostrarSeccion('resultados')">Resultados</button>
-            <button onclick="mostrarSeccion('escrutador')">Escrutador 2.0</button>
-        </nav>
     </header>
 
+    <!-- MENÚ -->
+    <nav>
+        <button onclick="mostrarSeccion('calendario')">📅 Calendario</button>
+        <button onclick="mostrarSeccion('clasificacion')">📊 Clasificación</button>
+        <button onclick="mostrarSeccion('resultados')">⚽ Resultados</button>
+        <button onclick="mostrarSeccion('iframe')">📺 Iframe</button>
+    </nav>
+
+    <!-- CONTENIDO -->
     <main>
 
-        <!-- CLASIFICACIÓN -->
-        <section id="clasificacion" class="seccion">
+        <div id="calendario" class="seccion">
+            <h2>Calendario</h2>
+            <p>Aquí irá el calendario del torneo.</p>
+        </div>
+
+        <div id="clasificacion" class="seccion">
             <h2>Clasificación</h2>
-            <table id="tabla-clasificacion"></table>
-        </section>
+            <p>Aquí irá la tabla de clasificación.</p>
+        </div>
 
-        <!-- JORNADAS -->
-        <section id="jornadas" class="seccion" style="display:none;">
-            <h2>Jornadas</h2>
-            <div id="lista-jornadas"></div>
-        </section>
-
-        <!-- RESULTADOS -->
-        <section id="resultados" class="seccion" style="display:none;">
+        <div id="resultados" class="seccion">
             <h2>Resultados</h2>
-            <div id="lista-resultados"></div>
-        </section>
+            <p>Aquí irán los resultados de los partidos.</p>
+        </div>
 
-        <!-- ESCRUTADOR 2.0 -->
-        <section id="escrutador" class="seccion" style="display:none;">
-            <h2>Escrutador 2.0</h2>
-
-   <iframe 
-    width="700" 
-    height="900" 
-    frameborder="0" 
-    scrolling="no"
-    src="https://1drv.ms/x/c/9e2ad67d77893109/IQRKLS76eZCRQZ54Qma-2pFUAdmMrgJh6S6kH5fDoPp6b0U?em=2&ActiveCell='Escrutador%202.0'!G18&Item='Escrutador%202.0'!C14%3AAN50&wdHideGridlines=True&wdInConfigurator=True">
-</iframe>
-
-        </section>
+        <div id="iframe" class="seccion">
+            <h2>Iframe</h2>
+            <iframe src="https://yojjbc.github.io/torneo-26-27"></iframe>
+        </div>
 
     </main>
 
-    <script src="torneo.js"></script>
+    <!-- SCRIPT -->
+    <script>
+        // Mostrar secciones
+        function mostrarSeccion(id) {
+            document.querySelectorAll('.seccion').forEach(sec => {
+                sec.style.display = "none";
+                sec.style.opacity = 0;
+            });
+
+            const s = document.getElementById(id);
+            s.style.display = "block";
+            setTimeout(() => s.style.opacity = 1, 50);
+        }
+
+        // Modo claro / oscuro
+        const toggle = document.getElementById("toggle-mode");
+
+        toggle.addEventListener("click", () => {
+            document.body.classList.toggle("light");
+            document.body.classList.toggle("dark");
+        });
+    </script>
+
 </body>
 </html>
