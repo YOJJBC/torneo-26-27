@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>El Gran Torneo ( Temporada 26 / 27 )</title>
+    <title>Torneo 26/27</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -11,7 +11,7 @@
 
     <!-- HEADER -->
     <header>
-        <!-- BOTÓN SOL/LUNA (vacío para evitar doble icono) -->
+        <!-- BOTÓN SOL/LUNA -->
         <button id="toggle-mode"></button>
 
         <h1>Torneo 26/27</h1>
@@ -22,30 +22,37 @@
         <button onclick="mostrarSeccion('calendario')">📅 Calendario</button>
         <button onclick="mostrarSeccion('clasificacion')">📊 Clasificación</button>
         <button onclick="mostrarSeccion('resultados')">⚽ Resultados</button>
-        <button onclick="mostrarSeccion('iframe')">🧮 Escrutador</button>
+        <button onclick="mostrarSeccion('escrutador')">🧮 Escrutador</button>
     </nav>
 
     <!-- CONTENIDO -->
     <main>
 
+        <!-- SECCIÓN CALENDARIO -->
         <div id="calendario" class="seccion">
             <h2>Calendario</h2>
             <p>Aquí irá el calendario del torneo.</p>
         </div>
 
+        <!-- SECCIÓN CLASIFICACIÓN -->
         <div id="clasificacion" class="seccion">
             <h2>Clasificación</h2>
             <p>Aquí irá la tabla de clasificación.</p>
         </div>
 
+        <!-- SECCIÓN RESULTADOS -->
         <div id="resultados" class="seccion">
             <h2>Resultados</h2>
             <p>Aquí irán los resultados de los partidos.</p>
         </div>
 
-        <div id="iframe" class="seccion">
-            <h2>Iframe</h2>
-            <iframe src="https://yojjbc.github.io/torneo-26-27"></iframe>
+        <!-- SECCIÓN ESCRUTADOR -->
+        <div id="escrutador" class="seccion">
+            <h2>Escrutador</h2>
+
+            <iframe 
+                src="https://1drv.ms/x/c/9e2ad67d77893109/IQRKLS76eZCRQZ54Qma-2pFUAdmMrgJh6S6kH5fDoPp6b0U?em=2&ActiveCell='Escrutador%202.0'!G18&Item='Escrutador%202.0'!C14%3AAN50&wdHideGridlines=True&wdInConfigurator=True">
+            </iframe>
         </div>
 
     </main>
