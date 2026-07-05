@@ -1,6 +1,6 @@
 {
     "equipos": [
-        "Equipo A",
+        "Curripipi",
         "Equipo B",
         "Equipo C",
         "Equipo D"
@@ -16,7 +16,7 @@
         {
             "numero": 2,
             "partidos": [
-                {"local": "Equipo A", "visitante": "Equipo C", "golesLocal": 1, "golesVisitante": 3},
+                {"local": "Curripipi", "visitante": "Equipo C", "golesLocal": 1, "golesVisitante": 3},
                 {"local": "Equipo B", "visitante": "Equipo D", "golesLocal": 2, "golesVisitante": 2}
             ]
         }
