@@ -1,5 +1,7 @@
 /* ======== ESTILO GENERAL ======== */
-body {
+html, body {
+    width: 100%;
+    max-width: none !important;
     margin: 0;
     font-family: Arial, sans-serif;
     background: #e9e9e9; /* gris claro tipo Flashscore */
@@ -47,7 +49,7 @@ nav button:hover {
 main {
     padding: 20px;
     width: 100%;
-    max-width: none !important; /* permite iframe grande */
+    max-width: none !important;
 }
 
 /* ======== TARJETAS DE SECCIÓN ======== */
@@ -56,7 +58,7 @@ main {
     padding: 20px;
     border-radius: 6px;
     width: 100%;
-    max-width: none !important; /* elimina límite de ancho */
+    max-width: none !important;
     margin: 0 auto;
     box-shadow: 0px 2px 6px rgba(0,0,0,0.15); /* sombra estilo Flashscore */
 }
@@ -90,13 +92,14 @@ table td {
 }
 
 /* ======== IFRAME ======== */
-/* ======== IFRAME ======== */
 iframe {
-    width: 700px;
+    width: 700px !important;   /* tamaño estable que sí funciona */
+    max-width: none !important;
     height: 900px;
     border: none;
     margin-top: 10px;
 
+    /* Visualización al 80% */
     transform: scale(0.8);
     transform-origin: top left;
 }
