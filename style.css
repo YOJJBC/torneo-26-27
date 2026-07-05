@@ -1,72 +1,97 @@
-/* Fondo general */
+/* ======== ESTILO GENERAL ======== */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #e9e9e9;
+    background: #e9e9e9; /* gris claro tipo Flashscore */
+    color: #222;
 }
 
-/* Encabezado */
+/* ======== HEADER ======== */
 header {
-    background: #1a1a1a;
-    color: #e9e9e9;
+    background: #0f0f0f; /* casi negro */
+    color: #fff;
     padding: 15px;
     text-align: center;
+    border-bottom: 2px solid #2ecc71; /* verde Flashscore */
 }
 
-/* Navegación */
+header h1 {
+    margin: 0;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+/* ======== MENÚ DE NAVEGACIÓN ======== */
 nav {
     margin-top: 10px;
 }
 
 nav button {
     margin: 5px;
-    padding: 10px 15px;
-    background: #3a3a3a;
-    color: white;
-    border: none;
+    padding: 10px 20px;
+    background: #2f2f2f;
+    color: #fff;
+    border: 1px solid #444;
     cursor: pointer;
     border-radius: 4px;
+    font-size: 15px;
+    transition: 0.2s;
 }
 
 nav button:hover {
-    background: #5a5a5a;
+    background: #2ecc71; /* verde Flashscore */
+    color: #000;
 }
 
-/* Contenido principal */
+/* ======== CONTENIDO PRINCIPAL ======== */
 main {
     padding: 20px;
 }
 
-/* Tablas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: #ffffff;
-}
-
-table th, table td {
-    border: 1px solid #ccc;
-    padding: 8px;
-    text-align: center;
-}
-
-/* Títulos */
-h2 {
-    margin-top: 0;
-}
-
-/* Secciones */
+/* ======== TARJETAS DE SECCIÓN ======== */
 .seccion {
-    background: #e9e9e9;
+    background: #ffffff;
     padding: 20px;
     border-radius: 6px;
     width: 100%;
-    max-width: none;
+    max-width: 2000px; /* permite iframe grande */
+    margin: 0 auto;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.15); /* sombra estilo Flashscore */
 }
 
-/* Iframe grande */
+/* ======== TÍTULOS ======== */
+h2 {
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #2ecc71; /* verde Flashscore */
+    font-size: 22px;
+}
+
+/* ======== TABLAS ======== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fff;
+    font-size: 15px;
+}
+
+table th {
+    background: #f5f5f5;
+    border-bottom: 2px solid #ddd;
+    padding: 10px;
+    font-weight: bold;
+}
+
+table td {
+    border-bottom: 1px solid #eee;
+    padding: 8px;
+}
+
+/* ======== IFRAME ======== */
 iframe {
-    width: 2000px !important;
-    max-width: none !important;
+    width: 100%;
+    max-width: 2000px;
+    height: 900px;
     border: none;
+    margin-top: 10px;
 }
