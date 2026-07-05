@@ -1,77 +1,51 @@
-async function cargarDatos() {
-    const respuesta = await fetch("data.json");
-    const datos = await respuesta.json();
-    generarClasificacion(datos);
-    generarJornadas(datos);
-    generarResultados(datos);
-}
-
+// CAMBIO DE SECCIONES CON ANIMACIÓN
 function mostrarSeccion(id) {
-    document.querySelectorAll(".seccion").forEach(sec => sec.style.display = "none");
-    document.getElementById(id).style.display = "block";
-}
-
-function generarClasificacion(datos) {
-    const tabla = document.getElementById("tabla-clasificacion");
-    tabla.innerHTML = `
-        <tr>
-            <th>Equipillos</th>
-            <th>Puntos</th>
-            <th>GF</th>
-            <th>GC</th>
-        </tr>
-    `;
-
-    const stats = {};
-
-    datos.equipos.forEach(e => stats[e] = { puntos: 0, gf: 0, gc: 0 });
-
-    datos.jornadas.forEach(j => {
-        j.partidos.forEach(p => {
-            stats[p.local].gf += p.golesLocal;
-            stats[p.local].gc += p.golesVisitante;
-
-            stats[p.visitante].gf += p.golesVisitante;
-            stats[p.visitante].gc += p.golesLocal;
-
-            if (p.golesLocal > p.golesVisitante) stats[p.local].puntos += 3;
-            else if (p.golesLocal < p.golesVisitante) stats[p.visitante].puntos += 3;
-            else {
-                stats[p.local].puntos += 1;
-                stats[p.visitante].puntos += 1;
-            }
-        });
+    document.querySelectorAll('.seccion').forEach(sec => {
+        sec.style.display = 'none';
+        sec.style.opacity = 0;
+        sec.style.transform = 'translateY(5px)';
     });
 
-    datos.equipos.forEach(e => {
-        tabla.innerHTML += `
-            <tr>
-                <td>${e}</td>
-                <td>${stats[e].puntos}</td>
-                <td>${stats[e].gf}</td>
-                <td>${stats[e].gc}</td>
-            </tr>
-        `;
-    });
+    const target = document.getElementById(id);
+    target.style.display = 'block';
+
+    setTimeout(() => {
+        target.style.opacity = 1;
+        target.style.transform = 'translateY(0)';
+    }, 10);
 }
 
-function generarJornadas(datos) {
-    const cont = document.getElementById("lista-jornadas");
-    datos.jornadas.forEach(j => {
-        cont.innerHTML += `<h3>Jornada ${j.numero}</h3>`;
-        j.partidos.forEach(p => {
-            cont.innerHTML += `<p>${p.local} ${p.golesLocal} - ${p.golesVisitante} ${p.visitante}</p>`;
-        });
-    });
-}
+// MODO OSCURO / CLARO CON ICONO DINÁMICO
+document.addEventListener('DOMContentLoaded', () => {
 
-function generarResultados(datos) {
-    const cont = document.getElementById("lista-resultados");
-    datos.jornadas.forEach(j => {
-        j.partidos.forEach(p => {
-            cont.innerHTML += `<p>${p.local} ${p.golesLocal} - ${p.golesVisitante} ${p.visitante}</p>`;
-        });
-    });
-}
+    // Modo por defecto → oscuro
+    document.body.classList.add('dark');
 
-cargarDatos();
+    const btn = document.getElementById('toggle-mode');
+
+    // Icono inicial (modo oscuro → mostrar sol)
+    btn.textContent = "☀️";
+
+    btn.addEventListener('click', () => {
+
+        // SOLO CAMBIA EL MODO, NO CAMBIA DE SECCIÓN
+        if (document.body.classList.contains('dark')) {
+
+            // Pasar a modo claro
+            document.body.classList.remove('dark');
+            document.body.classList.add('light');
+
+            // Mostrar luna (porque ahora estás en claro)
+            btn.textContent = "🌙";
+
+        } else {
+
+            // Pasar a modo oscuro
+            document.body.classList.remove('light');
+            document.body.classList.add('dark');
+
+            // Mostrar sol (porque ahora estás en oscuro)
+            btn.textContent = "☀️";
+        }
+    });
+});
