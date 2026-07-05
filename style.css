@@ -1,16 +1,19 @@
+/* Fondo general */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: #5a5a5a;
+    background: #e9e9e9;
 }
 
+/* Encabezado */
 header {
     background: #1a1a1a;
-    color: #5a5a5a;
+    color: #e9e9e9;
     padding: 15px;
     text-align: center;
 }
 
+/* Navegación */
 nav {
     margin-top: 10px;
 }
@@ -29,14 +32,16 @@ nav button:hover {
     background: #5a5a5a;
 }
 
+/* Contenido principal */
 main {
     padding: 20px;
 }
 
+/* Tablas */
 table {
     width: 100%;
     border-collapse: collapse;
-    background: white;
+    background: #ffffff;
 }
 
 table th, table td {
@@ -45,15 +50,23 @@ table th, table td {
     text-align: center;
 }
 
+/* Títulos */
 h2 {
     margin-top: 0;
 }
 
+/* Secciones */
 .seccion {
-    background: #5a5a5a;
+    background: #e9e9e9;
     padding: 20px;
     border-radius: 6px;
     width: 100%;
     max-width: none;
 }
 
+/* Iframe grande */
+iframe {
+    width: 2000px !important;
+    max-width: none !important;
+    border: none;
+}
