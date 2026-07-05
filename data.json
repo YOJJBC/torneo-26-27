@@ -9,7 +9,7 @@
         {
             "numero": 1,
             "partidos": [
-                {"local": "Equipo A", "visitante": "Equipo B", "golesLocal": 2, "golesVisitante": 1},
+                {"local": "Curripipi", "visitante": "Equipo B", "golesLocal": 2, "golesVisitante": 1},
                 {"local": "Equipo C", "visitante": "Equipo D", "golesLocal": 0, "golesVisitante": 0}
             ]
         },
