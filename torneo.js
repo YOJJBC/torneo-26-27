@@ -15,7 +15,7 @@ function generarClasificacion(datos) {
     const tabla = document.getElementById("tabla-clasificacion");
     tabla.innerHTML = `
         <tr>
-            <th>Equipo</th>
+            <th>Equipillos</th>
             <th>Puntos</th>
             <th>GF</th>
             <th>GC</th>
